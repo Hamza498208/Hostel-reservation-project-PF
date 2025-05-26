@@ -1,0 +1,868 @@
+#include<iostream>
+#include<string>
+#include<windows.h>
+using namespace std;
+int r1;
+void choice(); 
+void welcome();
+void contact();
+void intro();
+void girls();
+void boys();
+void recal();
+void user();
+void user()
+{
+	cout<<"~~~~~~~~Congratulations you have now registered~~~~~~  \n\n";
+	cout<<"---------:::::We would like to enter your details::::---------- \n\n ";
+	string fname,lname;
+	long long int no,cnic;
+	cout<<"enter u first name: ";
+	cin>>fname;
+	cout<<"Enter yuor last name: ";
+	cin>>lname;
+	cout<<"Enter your cnic: ";
+	cin>>cnic;
+	cout<<"Enter your no: ";
+	cin>>no;
+	cout<<endl;
+	cout<<endl;
+	cout<<"   ***Please validate your information we are providing your given information***  "<<endl<<endl;
+	cout<<"Your First name is  : "<<fname<<endl;
+	cout<<"Your Last name is   : "<<lname<<endl;
+	cout<<"Your Cnic number is : "<<cnic<<endl;
+	cout<<"Your number is      : "<<no<<endl;
+	cout<<"Your total bill is  : "<<r1<<endl<<endl;
+	cout<<"######################################\n\n";
+	cout<<"         Hope to see you again :)      \n";
+	cout<<"               Good bye:)       \n\n";
+	cout<<"######################################\n\n";
+	
+}
+void choice(int customer)
+{ 
+	while(customer!=5)
+	{
+	cout<<":::::::::::::::::::::::::::::::::\n";
+	cout<<"        ENTER YOUR CHOICE       \n";
+	cout<<":::::::::::::::::::::::::::::::::\n";
+	cin>>customer;
+	if(customer==1)
+	{
+		intro();
+		break;
+	} 
+	if(customer==2)
+	{
+		contact();
+		break;
+	
+	}
+	if(customer==3)
+	{
+		girls();
+		break;
+		
+	}
+	if(customer==4)
+	{
+		boys();
+		break;
+	}
+	}
+}
+//hostel charges;
+void recal()
+{
+	int room;
+		int customer;
+	char c;
+	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;
+	cout<<"                Basic room:          "<<endl;
+	cout<<"---------------Available facilities-----------"<<endl;
+	cout<<"          Single person room charges:\n";
+	cout<<"          Per Month 420$/-\n";
+	cout<<"          Extra charges for Mess and Internet: 200$/-\n\n";
+	cout<<"If you want to select basic room press 1 \n\n";
+	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl<<endl;
+	
+		//Two Person room Charges;
+	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;
+	cout<<"                Advance room:          "<<endl;
+	cout<<"---------------Available facilities-----------"<<endl;	
+	cout<<"          Two persons room charges:\n";
+	cout<<"          Per Month 350$/-\n";
+	cout<<"          Extra charges for Mess and Internet: 200$/-\n\n";
+	cout<<"If you want to select basic room press 2 \n\n";
+	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"<<endl;
+	
+				//Three Person room charges;
+	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;			
+	cout<<"                Premium room:          "<<endl;
+	cout<<"---------------Available facilities-----------"<<endl;			
+	cout<<"          Three persons room charges:\n";
+	cout<<"          Per Month 200$/-\n";
+	cout<<"          Extra charges for Mess and Internet: 200$/-\n\n";
+	cout<<"If you want to select basic room press 3 \n\n";
+	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"<<endl;
+	
+				//Four persons room charges;
+	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;			
+	cout<<"                Elite :          "<<endl;
+	cout<<"---------------Available facilities-----------"<<endl;
+	cout<<"          Four persons room charges:\n";
+	cout<<"          Per Month 150$/-\n";
+	cout<<"          Extra charges for Mess and Internet: 200$/-\n\n";
+	cout<<"If you want to select basic room press 4 \n\n";
+	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"<<endl;
+	cin>>room;
+	cout<<endl;
+	if(room==1)
+	{
+	
+	int d;
+	cout<<" HOW many months you want to stay  : ";
+	cin>>d;
+	r1=(d*420)+200;
+}
+else	if(room==2)
+	{
+	
+	int d;
+	cout<<" HOW many months you want to stay  : ";
+	cin>>d;
+	r1=(d*350)+200;
+}
+else	if(room==3)
+	{
+	
+	int d;
+	cout<<" HOW many months you want to stay  : ";
+	cin>>d;
+	r1=(d*200)+200;
+}
+	else if(room==4)
+	{
+	
+	int d;
+	cout<<" HOW many months you want to stay  : ";
+	cin>>d;
+	cout<<endl<<endl;
+	r1=(d*150)+200;
+}
+	
+	
+		//Booking detail here;
+		char book;
+	cout<<"    If you want to book a room then press 'b'',B': \n";
+	cin>>book;
+	if(book=='b'|| book=='B')
+	{
+		user();
+	}
+
+	cout<<"    For main menu press 'm','M': \n";
+	cin>>c;
+	if(c=='m'||c=='M')
+	{
+		welcome();
+		choice(customer);
+		
+	}
+}
+// menu function;
+void welcome()
+{
+	HANDLE h=GetStdHandle(STD_OUTPUT_HANDLE);
+
+SetConsoleTextAttribute(h,14)	;
+cout<<"\n\n\n\n\n\n------------->>>>>>>>>>Welcome to fly.com<<<<<<<<<<------------\n\n\n\n\n\n";
+
+cout<<" *****************************************************************************\n";
+cout<<" *****************************************************************************\n\n\n";
+cout<<" *                 ~~~~~~>>>Press 1 for introduction for our company           *\n";
+cout<<" *                  ~~~~~>>>Press 2 for our contact number                     * \n";
+cout<<" *                  ~~~~~>>>Press 3 for girls hostel                           *\n";
+cout<<" *                  ~~~~~>>>Press 4 for boys hostel                            *\n";
+cout<<" *                   ~~~~>>>Press 5 to exit                                    *\n\n\n";
+cout<<" ****************************************************************************\n\n\n" ;
+}
+//intro function;
+void intro()
+{ 
+int i;
+cout<<"            We are located in main area\n\n";
+cout<<"            We provide online facilites\n\n";
+cout<<"            Our company is multinational\n\n";
+cout<<"            Hope you will enjoy our services\n\n";
+cout<<"            Press X for for main menu: ";
+char x;
+cin>>x;
+if(x=='X'||x=='x'){
+welcome();
+choice(i);
+}
+}
+void contact()//contact function
+{
+	int i;
+cout<<"_____________________________________________\n\n";
+cout<<"           Our local number is +92********** \n\n";
+cout<<"           For queries contact here 123abc@gmail.com \n\n";
+cout<<"           For booking through number +92**********\n\n";
+cout<<"            Press X for for main menu: ";
+char x;
+cin>>x;
+if(x=='X'||x=='x'){
+welcome();
+choice(i);
+}
+} 
+void girls()//For Girls hostel areas;
+{
+	cout<<"   Our services are avaible in following areas   \n";
+	cout<<"______________________________________________\n\n";
+cout<<"   1----->>>Cantt \n";
+cout<<"   2----->>>Gulgasht\n";
+cout<<"   3----->>>DHA\n";
+cout<<"   4----->>>CHUNGI NO 1\n";
+cout<<"   5----->>>BCG CHOWK\n";
+
+cout<<"______________________________________________\n\n";
+int area;
+cout<<"Select area\n";
+cin>>area;
+//while(true)Hostels Details;
+
+	if(area==1)//Hostel area 1
+{
+cout<<"*****Available hostels in Cantt are*****\n\n";
+cout<<"1--->>Al Rehman Girls Hostel \n";
+cout<<"2--->>Ayesha Girls Hostel\n";
+cout<<"3--->>Jannat Girls Hostel\n";
+cout<<"4--->>Sadia Girls Hostel\n\n";
+
+int l;
+cout<<"Choose hostel: ";//choosing hostel from area 1;
+cin>>l;
+{
+		if(l==1){
+	cout<<"You selected Al Rehman Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+}
+		else if(l==2){
+	cout<<"Wasi Girls Hostel\n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+}
+		else if(l==3){
+	cout<<"you selected Jannat Girls Hostel \n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+	
+}
+		else if(l==4){
+	cout<<"you selected Khuram Girls Hostel \n";
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+	}
+	
+}
+
+}
+if(area==2)//Hostel area 2
+{
+	
+cout<<"*****Available hostels are*****\n\n";
+cout<<"1--->>Al-Shifa Girls Hostel \n";
+cout<<"2--->>Al-Rehmat Girls Hostel \n";
+cout<<"3--->>Al-Naimat Girls Hostel \n";
+cout<<"4--->>Haya Girls Hostel \n\n";
+int m;
+cout<<"Choose hostel: ";//choosing hostel from area 2;
+cin>>m;
+
+{
+		if(m==1){
+	cout<<"You selected Al-Shifa Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(m==2){
+	cout<<"you selected Al-Rehmat Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(m==3){
+	cout<<"you selected Al-Naimat Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(m==4){
+	cout<<"you selected Haya Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+	
+}
+
+}
+if(area==3)//hostel area 3;
+{
+cout<<"*****Available hostels are*****\n\n";
+cout<<"1--->>Wafa Girls Hostel \n";
+cout<<"2--->>Dar-e-Haram Girls Hostel \n";
+cout<<"3--->>Jannat Girls Hostel\n";
+cout<<"4--->>Zarish Girls Hostel \n\n";
+int j;
+cout<<"Choose Hostel: ";//choosing hostel from area 3;
+cin>>j;
+
+{
+		if(j==1){
+	cout<<"You selected Wafa Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(j==2){
+	cout<<"you selected Dar-e-Haram Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+	}
+		else if(j==3){
+	cout<<"you selected Jannat Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(j==4){
+	cout<<"you selected Zarish Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+}
+
+}
+if(area==4)//Hostel area 4;
+{
+
+
+cout<<"*****Available hostels are*****\n\n";
+cout<<"1--->>Al-Girls Hostel \n";
+cout<<"2--->>Girls Group Hostel \n";
+cout<<"3--->>The Society Girls Hostel \n";
+cout<<"4--->>Haider Girls Hostel\n\n";
+int k;
+cout<<"Choose Hostel: ";//choosing hostel from area 4;
+cin>>k;
+
+{
+		if(k==1){
+	cout<<"You selected Al-Girls Hostel\n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+}
+		else if(k==2){
+	cout<<"you selected Girls Group Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(k==3){
+	cout<<"you selected The Society Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(k==4){
+	cout<<"you selected Haider Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+}
+}
+if(area==5)//Hostel area 5;
+{
+cout<<"*****Available hostels are*****\n\n";
+cout<<"1--->>Internaitional Gitrls Hostel \n";
+cout<<"2--->>Relax In Girls Hostel\n";
+cout<<"3--->>The Girls Hostel\n";
+cout<<"4--->>Rocky Girls Hostel \n\n";
+int g;
+cout<<"Choose Hostel";//choosing hostel from area 5;
+cin>>g;
+
+{
+		if(g==1){
+	cout<<"You selected International Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(g==2){
+	cout<<"you selected Relax in Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(g==3){
+	cout<<"you selected The Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(g==4){
+	cout<<"you selected Rocky Girls Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+	
+}
+}
+}
+//Boys Hostel Function Starts Heres
+void boys(){
+	cout<<"   Our services are avaible in following areas   \n";
+	cout<<"______________________________________________\n\n";
+cout<<"   1----->>>Cantt \n";
+cout<<"   2----->>>Gulgasht\n";
+cout<<"   3----->>>DHA\n";
+cout<<"   4----->>>CHUNGI NO 1\n";
+cout<<"   5----->>>BCG CHOWK\n";
+cout<<"   6----->>>GHANTA GHR\n";
+cout<<"______________________________________________\n\n";
+int area;
+cout<<"Select area\n";
+cin>>area;
+//while(true)Hostels Details;
+
+	if(area==1)//Hostel area 1
+{
+cout<<"*****Available hostels in Cantt are*****\n\n";
+cout<<"1--->>Al Rehman Boys Hostel \n";
+cout<<"2--->>Ayesha Boys Hostel\n";
+cout<<"3--->>Jannat Boys Hostel\n";
+cout<<"4--->>Sadia Boys Hostel\n\n";
+
+int l;
+cout<<"Choose hostel: ";//choosing hostel from area 1;
+cin>>l;
+{
+		if(l==1){
+	cout<<"You selected Al Rehman Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+}
+		else if(l==2){
+	//Two Person room Charges;
+	cout<<"Ayesha Boys Hostel\n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+}
+		else if(l==3){
+			//Three Person room charges;
+	cout<<"you selected Jannat Boys Hostel \n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+	
+}
+		else if(l==4){
+			//Four persons room charges;
+	cout<<"you selected Khuram Boys Hostel \n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+	}
+	
+}
+
+}
+if(area==2)//Hostel area 2
+{
+	
+cout<<"*****Available hostels are*****\n\n";
+cout<<"1--->>Al-Shifa Boys Hostel \n";
+cout<<"2--->>Al-Rehmat Boys Hostel \n";
+cout<<"3--->>Al-Naimat Boys Hostel \n";
+cout<<"4--->>Haya Boys Hostel \n\n";
+int m;
+cout<<"Choose hostel: ";//choosing hostel from area 2;
+cin>>m;
+
+{
+		if(m==1){
+	cout<<"You selected Al-Shifa Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(m==2){
+	cout<<"you selected Al-Rehmat Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(m==3){
+	cout<<"you selected Al-Naimat Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(m==4){
+	cout<<"you selected Haya Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+	
+}
+
+}
+if(area==3)//hostel area 3;
+{
+cout<<"*****Available hostels are*****\n\n";
+cout<<"1--->>Wafa Boys Hostel \n";
+cout<<"2--->>Dar-e-Haram Boys Hostel \n";
+cout<<"3--->>Jannat Boys Hostel\n";
+cout<<"4--->>Zarish Boys Hostel \n\n";
+int j;
+cout<<"Choose Hostel: ";//choosing hostel from area 3;
+cin>>j;
+
+{
+		if(j==1){
+	cout<<"You selected Wafa Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(j==2){
+	cout<<"you selected Dar-e-Haram Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+	}
+		else if(j==3){
+	cout<<"you selected Jannat Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(j==4){
+	cout<<"you selected Zarish Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+}
+
+}
+if(area==4)//Hostel area 4;
+{
+
+
+cout<<"*****Available hostels are*****\n\n";
+cout<<"1--->>Al-Boys Hostel \n";
+cout<<"2--->>Boys Group Hostel \n";
+cout<<"3--->>The Society Boys Hostel \n";
+cout<<"4--->>Haider Boys Hostel\n\n";
+int k;
+cout<<"Choose Hostel: ";//choosing hostel from area 4;
+cin>>k;
+
+{
+		if(k==1){
+	cout<<"You selected Al-Boys Hostel\n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+}
+		else if(k==2){
+	cout<<"you selected Boys Group Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(k==3){
+	cout<<"you selected The Society Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(k==4){
+	cout<<"you selected Haider Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+}
+}
+if(area==5)//Hostel area 5;
+{
+cout<<"*****Available hostels are*****\n\n";
+cout<<"1--->>Internaitional Boys Hostel \n";
+cout<<"2--->>Relax In Boys Hostel\n";
+cout<<"3--->>The Boys Hostel\n";
+cout<<"4--->>Rocky Boys Hostel \n\n";
+int g;
+cout<<"Choose Hostel";//choosing hostel from area 5;
+cin>>g;
+
+{
+		if(g==1){
+	cout<<"You selected International Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(g==2){
+	cout<<"you selected Relax in Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(g==3){
+	cout<<"you selected The Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+		else if(g==4){
+	cout<<"you selected Rocky Boys Hostel \n\n";
+	recal();
+	char fix;
+	cin>>fix;
+	int call;
+	if(fix=='b'||fix=='B'){
+		welcome();
+		choice(call);
+	}
+		}
+	
+}
+}
+}
+
+//booking function start heres;
+
+int main()
+{
+int customer;
+	welcome();
+	choice(customer);
+
+	return 0;
+	
+}
